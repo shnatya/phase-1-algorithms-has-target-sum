@@ -1,5 +1,16 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+ for(let i = 0; i < array.length - 2; i++) { //array.length - 2 -- i will get to the element before the last(predposlednii)
+    debugger
+    for(let j = i + 1; j < array.lenght - 1; j++) {
+      debugger
+      if(array[i] + array[j] === target) {
+        debugger
+        return true
+      }
+    }
+  return false
+  } 
 }
 
 /* 
@@ -8,6 +19,13 @@ function hasTargetSum(array, target) {
 
 /* 
   Add your pseudocode here
+  iterate from the first element to the element before the last one
+    iterate from the second element to the last one
+    if the sum of an element and the next element equals to the target
+      return true
+    else 
+      continue iteration
+
 */
 
 /*
