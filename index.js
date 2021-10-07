@@ -1,16 +1,17 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
- for(let i = 0; i < array.length - 2; i++) { //array.length - 2 -- i will get to the element before the last(predposlednii)
+ for(let i = 0; i < array.length - 1; i++) { //array.length - 1 -- will get to the element before the last(predposlednii)
     debugger
-    for(let j = i + 1; j < array.lenght - 1; j++) {
+    for(let j = i + 1; j < array.length; j++) {
       debugger
       if(array[i] + array[j] === target) {
         debugger
         return true
       }
     }
-  return false
+  
   } 
+  return false
 }
 
 /* 
@@ -50,3 +51,20 @@ if (require.main === module) {
 }
 
 module.exports = hasTargetSum;
+
+/*for(let i = 0; i < array.length; i++) { //array.length - 2 -- i will get to the element before the last(predposlednii)
+    debugger
+    let complement = target - array[i];
+    for(let j = i + 1; j < array.length; j++) {
+      if(array[j] === complement){
+        return true
+      }
+      // debugger
+      // if(array[i] + array[j] === target) {
+      //   debugger
+      //   return true
+      // }
+    }
+  return false
+  } 
+}*/
